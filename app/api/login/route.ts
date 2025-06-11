@@ -18,7 +18,9 @@ export async function POST(req: NextRequest) {
       .setExpirationTime("1h")
       .sign(secret);
 
-    const response = NextResponse.redirect(new URL("/dashboard", req.url));
+    const response = NextResponse.redirect(new URL("/dashboard", req.url), {
+      status: 303, // See Other
+    });
     
     response.cookies.set("session_token", token, {
       httpOnly: true,

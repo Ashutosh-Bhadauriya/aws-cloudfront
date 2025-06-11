@@ -5,8 +5,9 @@ const secret = new TextEncoder().encode('H9/XjTxZqztR2JuuUEesh+47ccxJu21xDWHPnaz
 
 export async function middleware(req: NextRequest) {
   const sessionToken = req.cookies.get('session_token')?.value;
+  const { pathname } = req.nextUrl;
 
-  if (req.nextUrl.pathname.startsWith('/dashboard')) {
+  if (pathname.startsWith('/dashboard')) {
     if (!sessionToken) {
       return NextResponse.redirect(new URL('/', req.url));
     }
@@ -23,5 +24,12 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*'],
+  /*
+   * Match all request paths except for the ones starting with:
+   * - api (API routes)
+   * - _next/static (static files)
+   * - _next/image (image optimization files)
+   * - favicon.ico (favicon file)
+   */
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 }; 

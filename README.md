@@ -77,7 +77,7 @@ Configure the cache behaviors to trigger the Lambda@Edge functions:
   - **Event Type**: Origin Response
 
 - **Origin Request (for MFA callback)**:
-  - **Path Pattern**: `/api/mfa-callback`
+  - **Path Pattern**: `z/api/mfa-callback`
   - **Function ARN**: The ARN of your `origin-request` Lambda function.
   - **Event Type**: Origin Request
 
