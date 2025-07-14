@@ -29,12 +29,19 @@ export default function Home() {
                 type="email"
                 name="email"
                 placeholder="m@example.com"
+                defaultValue="ashutoshb455@gmail.com"
                 required
               />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" name="password" required />
+              <Input 
+                id="password" 
+                type="password" 
+                name="password" 
+                defaultValue="password"
+                required 
+              />
             </div>
           </CardContent>
           <CardFooter>

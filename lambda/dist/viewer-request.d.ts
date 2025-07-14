@@ -1,2 +1,1 @@
-import { CloudFrontRequestEvent, CloudFrontRequestResult } from 'aws-lambda';
-export declare function handler(event: CloudFrontRequestEvent): Promise<CloudFrontRequestResult>;
+export declare const handler: (event: any, context: any, callback: any) => void;

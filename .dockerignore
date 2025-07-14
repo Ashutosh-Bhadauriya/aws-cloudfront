@@ -1,0 +1,62 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage
+*.lcov
+
+# Next.js
+.next
+out
+
+# Production
+build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# AWS CDK
+infrastructure/
+cdk.out/
+
+# Git
+.git
+.gitignore
+
+# README and docs
+README.md
+*.md
+
+# Lambda functions (separate deployment)
+lambda/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db 
